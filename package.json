@@ -34,10 +34,10 @@
 	},
 	"private": true,
 	"scripts": {
-		"build": "",
+		"build": "vite build",
 		"cf-typegen": "wrangler types",
 		"check": "tsc && vite build && wrangler deploy --dry-run",
-		"deploy": "npm run deploy",
+		"deploy": "wrangler deploy",
 		"dev": "vite",
 		"lint": "eslint .",
 		"preview": "npm run build && vite preview"
