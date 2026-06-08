@@ -6,11 +6,11 @@
 本项目是 [BBQ (Pyrolysis)](https://gitee.com/Voltula/bbq) 跨端应用的 **Web WebAssembly (WASM)** 全栈部署版本。通过爆改 Vite + Hono + Cloudflare Workers 模板，将 Kotlin Multiplatform (KMP) 编译产出的 Compose HTML/WASM 静态资源与 Hono 边缘计算后端完美融合，实现全球超低延迟的边缘端托管。
 点击创建应用，然后选择Github滑到下面，Git-存储库URL填
 https://github.com/Voltual1/bbqcfworker.git
-[Git-存储库URL这样填](Git-存储库URL.png)
+[![Git-存储库URL这样填](Git-存储库URL.png)]
 点击下一步
 然后
 部署时构建命令留空，部署命令填"npm run deploy"即可
-[部署时这样填](部署时.png)
+[![部署时这样填](部署时.png)]
 ---
 部署完成后你可以自定义域名（不自定义域名国内不能直接访问🙃）
 
@@ -22,10 +22,10 @@ https://github.com/Voltual1/bbqcfworker.git
 位于 `src/worker` 目录，驱动边缘计算：
 ### 核心边缘网关 (`src/worker/index.ts`) 的核心作用
 
-`src/worker/index.ts` 是整个应用的边缘流量调度中枢，它直接运行在 Cloudflare 全球网络节点上。基于对原生请求的深度拦截与处理，它实现了以下高能特性：
+`src/worker/index.ts` 是整个应用的边缘流量调度中枢，它直接运行在 Cloudflare 节点上。它实现了以下特性：
 
 #### 1. 动态分流 (Reverse Proxy)
-* **API 动态代理**：拦截所有 `/api/` 开头的请求，无缝转发至高防后端集群 (`http://apk.xiaoqu.online`)
+* **API 动态代理**：拦截所有 `/api/` 开头的请求，无缝转发至 (`http://apk.xiaoqu.online`)
 识别 `/upload` 路由，将文件流分发至挽悦云 (`http://wanyueyun-x.xbjstd.cn:9812`)
 识别 `/proxy-img/`，自动代理图片请求防止加载图片失败
 
