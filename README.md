@@ -5,6 +5,7 @@
 
 本项目是 [BBQ (Pyrolysis)](https://gitee.com/Voltula/bbq) 跨端应用的 **Web WebAssembly (WASM)** 全栈部署版本。通过爆改 Vite + Hono + Cloudflare Workers 模板，将 Kotlin Multiplatform (KMP) 编译产出的 Compose HTML/WASM 静态资源与 Hono 边缘计算后端完美融合，实现全球超低延迟的边缘端托管。
 点击创建应用，然后选择Github滑到下面，Git-存储库URL填
+请注意 直接使用存储库URL可能会在部署在发生一些错误。更稳妥的做法是fork仓库，然后选择你fork后的仓库
 https://github.com/Voltual1/bbqcfworker.git
 [![Git-存储库URL这样填](Git-存储库URL.png)]
 点击下一步
