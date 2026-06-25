@@ -53,7 +53,7 @@ export default {
       let remainingPath = "";
 
       if (url.pathname.startsWith('/api/')) {
-        targetOrigin = "http://apk.xiaoqu.online";
+        targetOrigin = "https://api.smallfun.cn/";
         remainingPath = url.pathname + url.search;
       } 
       // 修复：兼容 /upload 和 /uploads 两种可能
