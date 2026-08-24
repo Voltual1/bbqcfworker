@@ -26,7 +26,8 @@ https://github.com/Voltual1/bbqcfworker.git
 `src/worker/index.ts` 是整个应用的边缘流量调度中枢，它直接运行在 Cloudflare 节点上。它实现了以下特性：
 
 #### 1. 动态分流 (Reverse Proxy)
-* **API 动态代理**：拦截所有 `/api/` 开头的请求，无缝转发至 (`http://apk.xiaoqu.online`)
+* **API 动态代理**：拦截所有 `/api/` 开头的请求，无缝转发至 ~~(`http://apk.xiaoqu.online`)~~
+* 上面的那个域名已弃用，现在应该使用api.smallfun.cn
 识别 `/upload` 路由，将文件流分发至挽悦云 (`http://wanyueyun-x.xbjstd.cn:9812`)
 识别 `/proxy-img/`，自动代理图片请求防止加载图片失败
 
